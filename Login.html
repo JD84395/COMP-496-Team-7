@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Signup</title>
+    <link rel="stylesheet" href="Login1.css">
+</head>
+<body>
+
+<!-- Login and Signup Container -->
+<div class="container">
+    <!-- Login Form -->
+    <div class="form-container" id="login-container">
+        <form id="login-form" onsubmit="login(event)">
+            <h2>Login</h2>
+            <div class="form-group">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" required>
+            </div>
+            <div class="form-group">
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" required>
+            </div>
+            <button type="submit">Login</button>
+            <p class="message">Don't have an account? <a href="#" onclick="switchToSignup()">Sign up</a></p>
+        </form>
+    </div>
+
+    <!-- Signup Form -->
+    <div class="form-container hidden" id="signup-container">
+        <form id="signup-form" onsubmit="signup(event)">
+            <h2>Create Account</h2>
+            <div class="form-group">
+                <label for="signup-name">Name:</label>
+                <input type="text" id="signup-name" required>
+            </div>
+            <div class="form-group">
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email" required>
+            </div>
+            <div class="form-group">
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" required>
+            </div>
+            <button type="submit">Sign Up</button>
+            <p class="message">Already have an account? <a href="#" onclick="switchToLogin()">Login</a></p>
+        </form>
+    </div>
+</div>
+
+<script src="login2.js"></script>
+</body>
+</html>
