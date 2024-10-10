@@ -13,6 +13,34 @@ body {
     height: 100vh;
 }
 
+/* Navigation styling*/
+.dashboard-nav {
+    background-color: #B81156;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-family:Garmond;
+}
+
+.dashboard-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dashboard-nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.dashboard-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.dashboard-nav a:hover {
+    color: #ccc;
+}
+
 .container {
     width: 300px;
     background: #fff;
