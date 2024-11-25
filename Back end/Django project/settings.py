@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "api",
+    'api',
     "rest_framework"
 ]
 
@@ -79,7 +79,12 @@ import mongoengine
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': BASE_DIR / 'db.mongo',
+        'NAME': 'db.mongo',
+        'HOST': 'localhost',
+        'PORT': '',
+        'USERNAME': '',
+        'PASSWORD': '',
+        'AUTH_SOURCE': 'admin',
     }
 }
 
