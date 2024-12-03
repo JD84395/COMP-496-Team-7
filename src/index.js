@@ -19,6 +19,9 @@ app.get("/signup", (req,res) =>{
     res.render("signup");
 });
 
+// Registure User 
+
+app.post ()
 // A port to run application 
 const port = 4000;
 app.listen(port, () => {
