@@ -1,9 +1,19 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render, redirect
+from django.contrib import messages
 from .models import Users
 from .serializer import UserSerializer
+
+def main(request):
+    return render(request, 'main.ejs')
+
+def login(request):
+    return render(request, 'login.ejs')
+
+def signup(request):
+    return render(request, 'signup.ejs')
 
 
 @api_view(['GET'])
@@ -30,3 +40,20 @@ def update_user(request, user_id):
         serializer.save()
         return Response(serializer.data, status=status.HTTP_200_OK) 
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+@api_view(['DELETE'])
+def delete_user(request, pk):
+    try:
+        users = Users.objects.get(pk=pk)
+
+        if users == request.user:
+            # Prevent self-deletion
+            messages.error(request, "You can't delete your own account.")
+            return redirect('profile')
+        
+        users.delete()
+        messages.success(request, "User successfully deleted.")
+    except Users.DoesNotExist:
+        messages.error(request, "User not found.")
+
+    return redirect('user_list')
