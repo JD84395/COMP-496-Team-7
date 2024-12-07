@@ -44,7 +44,7 @@ app.post("/signup", async (req, res) => {
 
         // Create a new user instance
         const newUser = new User({
-            name: req.body.username,  // Ensure this matches the form field name
+            name: req.body.username,  
             password: hashedPassword,
         });
 
@@ -52,15 +52,38 @@ app.post("/signup", async (req, res) => {
         const savedUser = await newUser.save();
         console.log("User registered:", savedUser);
 
-        res.redirect("/login");
+        res.redirect("/Login");
 
-        // Send success response with user details
+    
         res.status(201).send({ message: "User registered successfully", user: savedUser });
     } catch (err) {
         console.error("Error registering user:", err);
 
-        // Send error response
+        
         res.status(500).send("Error registering user.");
+    }
+});
+
+// Login POST route
+app.post("/Login", async (req, res) => {
+    const { name, password } = req.body;
+
+    try {
+        const user = await User.findOne({ name });
+        if (!user) {
+            return res.status(400).send("User not found");
+        }
+
+        const isMatch = await bcrypt.compare(password, user.password);
+        if (!isMatch) {
+            return res.status(400).send("Invalid credentials");
+        }
+
+        // Redirect or respond with success
+        res.status(200).send("Login successful");
+    } catch (err) {
+        console.error("Error during login:", err);
+        res.status(500).send("Server error");
     }
 });
 
