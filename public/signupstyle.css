@@ -5,51 +5,57 @@
     box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
     font-family:Garmond;
-    background: linear-gradient(to bottom right, #B81156, #5C3AAB); /* Gradient background */
+    background: linear-gradient(to bottom right, #B81156, #5C3AAB);
+    color: #fff;
+    margin: 0;
+    padding-top: 70px; /* Space for the fixed navbar */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #fff;
 }
 
-.container {
+
+.form-container-1 {
     width: 100%;
     max-width: 400px;
-    background-color: #ffffff; /* White container */
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
     padding: 30px;
-    color: #333; /* Text color inside the form */
+    color: #333;
 }
 
+/* Form Headings */
 h2 {
     text-align: center;
     margin-bottom: 20px;
     color: #5C3AAB;
 }
 
-.form-group {
+/* Form Fields */
+.form-group-1 {
     margin-bottom: 15px;
 }
 
-.form-group label {
+.form-group-1 label {
     display: block;
     font-size: 14px;
     color: #555;
     margin-bottom: 5px;
 }
 
-.form-group input {
+.form-group-1 input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
 }
+
 
 button {
     width: 100%;
@@ -58,6 +64,7 @@ button {
     color: white;
     border: none;
     border-radius: 5px;
+    font-family:Garmond;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -66,6 +73,7 @@ button {
 button:hover {
     background-color: #9A0F4A;
 }
+
 
 p {
     text-align: center;
@@ -83,50 +91,42 @@ p a:hover {
     text-decoration: underline;
 }
 
-/* Navigation styling */
-.dashboard-nav1 {
+/* Navbar */
+.dashboard-nav2 {
     background-color: #B81156;
     color: white;
-    padding: 15px;
-    text-align: center;
     font-family:Garmond;
-    position: fixed; /* Make it stick to the top */
-    top: 0; /* Align it to the top */
-    left: 0; 
-    width: 100%; 
-    z-index: 1000; 
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-.dashboard-nav1 ul {
+.dashboard-nav2 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
-.dashboard-nav1 li {
+.dashboard-nav2 li {
     display: inline-block;
     margin-right: 20px;
 }
 
-.dashboard-nav1 a {
+.dashboard-nav2 li:last-child {
+    margin-right: 0; /* Remove margin for the last item */
+}
+
+.dashboard-nav2 a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
-.dashboard-nav1 a:hover {
+.dashboard-nav2 a:hover {
     color: #ccc;
-}
-
-/* Add padding to the body to prevent content from overlapping the navbar */
-body {
-    font-family:Garmond;;
-    background: linear-gradient(to bottom right, #B81156, #5C3AAB); /* Gradient background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: #fff;
-    margin-top: 70px; 
 }

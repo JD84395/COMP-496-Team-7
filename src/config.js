@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 // MongoDB Atlas URI for your cluster
-const uri = "mongodb+srv://SidneyJohnson3911:Scj020421@usersdata.i3hw6.mongodb.net/logintut?retryWrites=true&w=majority&appName=UsersData"
+const uri = "mongodb+srv://SidneyJohnson3911:Scj020421@usersdata.i3hw6.mongodb.net/Logintut?retryWrites=true&w=majority&appName=UsersData"
 
 // Establish the connection
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(uri)
   .then(() => {
     console.log("Database Connected Successfully");
   })

@@ -5,7 +5,7 @@ function login(event) {
     const email = document.getElementById("login-email").value;
     const password = document.getElementById("login-password").value;
 
-    // Simple front-end validation (you would handle real validation on the server)
+    // Simple front-end validation 
     if (email === "test@test.com" && password === "password") {
         alert("Login successful!");
         // Redirect user or load dashboard here
@@ -22,7 +22,6 @@ function signup(event) {
     const email = document.getElementById("signup-email").value;
     const password = document.getElementById("signup-password").value;
 
-    // In a real app, you would send this data to your server
     console.log("Name:", name);
     console.log("Email:", email);
     console.log("Password:", password);
@@ -30,7 +29,7 @@ function signup(event) {
     alert("Account created successfully!");
 
     // After signup, switch to login
-    switchToLogin();
+    swichToLogin();t
 }
 
 // Function to switch to signup form
