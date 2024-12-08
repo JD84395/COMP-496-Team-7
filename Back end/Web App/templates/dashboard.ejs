@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dashboardstyle.css?v=<%= Date.now() %>">
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/Login">Login</a></li>
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="#contact">Learn More</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="profile-section">
+            <div class="profile-info">
+                <h2>Profile Information</h2>
+                <p>Email: john.doe@example.com</p>
+                <p>Username: john_doe</p>
+                <button>Edit Profile</button>
+            </div>
+        </div>
+
+        <!-- Editor.js Section -->
+        <div id="editorjs"></div>
+        <button id="save-btn">Save Data</button>
+    </main>
+
+    <!-- Include Editor.js plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/table@latest"></script>
+
+    <script src="/dashboardcode.js"></script>
+</body>
+</html>
