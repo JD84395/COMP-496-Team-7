@@ -37,9 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'api',
-    "rest_framework"
-]
+    'django.contrib.sites.models',
+    'webapp',
+    'rest_framework',
+    ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -56,7 +57,7 @@ ROOT_URLCONF = 'COMP496.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR/'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,11 +80,11 @@ import mongoengine
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'db.mongo',
+        'NAME': 'seniorlogin',
         'HOST': 'localhost',
-        'PORT': '',
-        'USERNAME': '',
-        'PASSWORD': '',
+        'PORT': 4000,
+        'USERNAME': 'scjohnson2@aggies.ncat.edu',
+        'PASSWORD': 'IloveDogs2002!',
         'AUTH_SOURCE': 'admin',
     }
 }
@@ -129,3 +130,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
