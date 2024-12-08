@@ -26,4 +26,5 @@ urlpatterns = [
     path('login/', include('webapp.urls')),
     path('signup/', include('webapp.urls')),
     path('users/delete', include('webapp.urls')),
+    path('dashboard', include('webapp.urls')),
 ]
