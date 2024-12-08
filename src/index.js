@@ -4,6 +4,7 @@ const bcrypt = require("bcrypt");
 const User = require("./config");
 //const Note = require("./Notes");
 
+
 const app = express();
 // convert into json format 
 app.use(express.json());
@@ -15,7 +16,8 @@ app.set('view engine', 'ejs');
 /// static file for css sheet 
 app.use(express.static("public"));
 app.set('views', path.join(__dirname,'../views'));
-//app.set('public', path.join(__dirname,'../public'));
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 
 app.get("/", (req, res) => {

@@ -1,0 +1,109 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Garamond;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #B81156;
+    color: white;
+    font-family: Garamond;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.navbar li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navbar li:last-child {
+    margin-right: 0; /* Remove margin for the last item */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #ccc;
+}
+
+/* Main Content Section */
+main {
+    padding-top: 120px; /* Adjust space for the navbar height */
+    padding: 20px;
+    flex-grow: 1;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.profile-section {
+    margin-bottom: 30px;
+}
+
+.profile-info {
+    background-color: #ECF0F1;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.profile-info h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.profile-info p {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+button {
+    background-color: #8664F7;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #7453df;
+}
+
+/* Editor.js Styles */
+#editorjs {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border: 1px solid #BDC3C7;
+    border-radius: 10px;
+    margin-top: 20px;
+}
