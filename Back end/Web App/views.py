@@ -15,6 +15,8 @@ def login(request):
 def signup(request):
     return render(request, 'signup.ejs')
 
+def dashboard(request):
+    return render(request, 'dashboard.ejs')
 
 @api_view(['GET'])
 def get_users(request):
