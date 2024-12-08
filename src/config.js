@@ -21,10 +21,9 @@ const Loginschema = new mongoose.Schema({
         type: String,
         required: true
     }
-});
+  }, { collection: 'IDKman' });
 
-// Create model from the schema
-const User = mongoose.model("IDKman", Loginschema);
+  const User = mongoose.model("IDKman", Loginschema);
 
-// Export the model to be used in other files
-module.exports = User;
+  module.exports = User;
+

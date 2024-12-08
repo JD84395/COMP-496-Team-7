@@ -122,7 +122,7 @@ p a:hover {
 /* Add padding to the body to prevent content from overlapping the navbar */
 body {
     font-family:Garmond;;
-    background: linear-gradient(to bottom right, #B81156, #5C3AAB); /* Gradient background */
+    background: white;
     display: flex;
     justify-content: center;
     align-items: center;

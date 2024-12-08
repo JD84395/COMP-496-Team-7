@@ -8,7 +8,7 @@
 /* Body Styling */
 body {
     font-family:Garmond;
-    background: linear-gradient(to bottom right, #B81156, #5C3AAB);
+    background: white;
     color: #fff;
     margin: 0;
     padding-top: 70px; /* Space for the fixed navbar */
