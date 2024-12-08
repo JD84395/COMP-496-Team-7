@@ -9,9 +9,11 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@editorjs/editorjs": "^2.30.7",
     "bcrypt": "^5.1.1",
     "ejs": "^3.1.10",
     "express": "^4.21.1",
+    "express-session": "^1.18.1",
     "mongoose": "^8.8.1"
   },
   "devDependencies": {
