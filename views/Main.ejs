@@ -26,18 +26,44 @@
         Welcome to GenX AI
         <div class="small-text">An application for finding out Phenotypes from Genotypes.</div>
         <div> <button class="Start"> Get Started </button> </div>
-
         </div>
 </div>
+<!-- Tab stuff for AI model -->
 
+<div class="Tab-Navigation">
+    <div class="Nav" onclick="openInput('textSection')">Text</div>
+    <div class="Nav" onclick="openInput('fileSection')">File</div>
+</div>
 
+<div>
+    <div id="textSection" class="Input">
+        <div class="Tab-Navigation">
+        </div>
+        <textarea placeholder="Type something..."></textarea>
+    </div>
+
+    <div id="fileSection" class="Input">
+        <div class="Tab-Navigation">
+        </div>
+        <input type="file" id="fileInput">
+    </div>
+
+    <script>
+        function openInput(sectionId) {
+            document.getElementById('textSection').style.display = 'none';
+            document.getElementById('fileSection').style.display = 'none';
+    
+            document.getElementById(sectionId).style.display = 'block';
+        }
+        openInput('textSection');
+    </script>
 </div>
 
 </div>
 
 <!-- Footer -->
 <footer>
-    <p>&copy; 2024 Your Name</p>
+    <p>&copy; 2024 GENX AI</p>
 </footer>
 
 </body>

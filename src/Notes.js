@@ -1,6 +1,7 @@
-/*const mongoose = require('./config');
+const mongoose = require('mongoose');
 
-const NoteSchema = new mongoose.Schema({
+const Schema = mongoose.Schema
+const NoteSchema = new Schema ({
   userId: {
       type: mongoose.Schema.Types.ObjectId, // Links the note to a user
       ref: "IDKman", // Reference to the user model
@@ -16,7 +17,7 @@ const NoteSchema = new mongoose.Schema({
   },
   createdAt: {
       type: Date,
-      default: Date.now,
+      default: Date.now(),
   },
 },  { collection: 'Notes' });
 
@@ -24,4 +25,3 @@ const NoteSchema = new mongoose.Schema({
 const Note = mongoose.model("Note", NoteSchema);
 
 module.exports = Note;  // Export the Note model for use elsewhere
-*/

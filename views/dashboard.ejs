@@ -23,16 +23,16 @@
     <main>
         <div class="profile-section">
             <div class="profile-info">
-                <h2>Profile Information</h2>
-                <p>Email: john.doe@example.com</p>
-                <p>Username: john_doe</p>
-                <button>Edit Profile</button>
+                <h2>Dashboard</h2>
             </div>
         </div>
 
+         <!-- Displaying User Notes -->
+         <h2>Your Notes:</h2>
         <!-- Editor.js Section -->
         <div id="editorjs"></div>
         <button id="save-btn">Save Data</button>
+    <div id="existing-content" data-content='<%- JSON.stringify(existingContent) %>'></div>
     </main>
 
     <!-- Include Editor.js plugins -->
@@ -42,5 +42,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/table@latest"></script>
 
     <script src="/dashboardcode.js"></script>
+
+    <script>
+        const userId = "<%= userId %>";
+        console.log("User ID:", userId);
+       const existingContent = JSON.parse(contentElement.getAttribute('data-content'));
+       console.log("Existing Content:", existingContent);
+       </script>
+    
 </body>
 </html>
